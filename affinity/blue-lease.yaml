@@ -1,0 +1,12 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: '2023-07-04T15:24:22Z'
+  name: blue
+  namespace: kube-node-lease
+  resourceVersion: '377916'
+  uid: c22629f7-393e-4c45-a6d5-305f69058731
+spec:
+  holderIdentity: blue
+  leaseDurationSeconds: 40
+  renewTime: '2023-07-04T15:35:00.116652Z'

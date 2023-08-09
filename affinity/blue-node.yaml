@@ -1,0 +1,89 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    node.alpha.kubernetes.io/ttl: '0'
+  creationTimestamp: '2023-07-04T15:42:27Z'
+  labels:
+    beta.kubernetes.io/arch: arm64
+    beta.kubernetes.io/os: linux
+    color: blue
+    kubernetes.io/arch: arm64
+    kubernetes.io/hostname: blue
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/control-plane: ''
+    node.kubernetes.io/exclude-from-external-load-balancers: ''
+  name: blue
+  resourceVersion: '378611'
+  uid: 517de969-9065-42dd-b978-6292f6010acf
+spec:
+  taints:
+    - effect: NoSchedule
+      key: node.kubernetes.io/unreachable
+      timeAdded: '2023-07-04T15:30:50Z'
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      timeAdded: '2023-07-04T15:42:50Z'
+status:
+  addresses:
+    - address: 192.168.65.6
+      type: InternalIP
+    - address: blue
+      type: Hostname
+  allocatable:
+    cpu: '1'
+    ephemeral-storage: '56403987976'
+    hugepages-1Gi: '0'
+    hugepages-2Mi: '0'
+    hugepages-32Mi: '0'
+    hugepages-64Ki: '0'
+    memory: 1039672Ki
+    pods: '110'
+  capacity:
+    cpu: '1'
+    ephemeral-storage: 11202244Ki
+    hugepages-1Gi: '0'
+    hugepages-2Mi: '0'
+    hugepages-32Mi: '0'
+    hugepages-64Ki: '0'
+    memory: 1142072Ki
+    pods: '110'
+  conditions:
+    - lastHeartbeatTime: '2023-07-04T15:30:44Z'
+      lastTransitionTime: '2023-07-04T15:30:50Z'
+      message: Kubelet never posted node status.
+      reason: NodeStatusNeverUpdated
+      status: Unknown
+      type: Ready
+    - lastHeartbeatTime: '2023-07-04T15:30:44Z'
+      lastTransitionTime: '2023-07-04T15:30:50Z'
+      message: Kubelet never posted node status.
+      reason: NodeStatusNeverUpdated
+      status: Unknown
+      type: MemoryPressure
+    - lastHeartbeatTime: '2023-07-04T15:30:44Z'
+      lastTransitionTime: '2023-07-04T15:30:50Z'
+      message: Kubelet never posted node status.
+      reason: NodeStatusNeverUpdated
+      status: Unknown
+      type: DiskPressure
+    - lastHeartbeatTime: '2023-07-04T15:30:44Z'
+      lastTransitionTime: '2023-07-04T15:30:50Z'
+      message: Kubelet never posted node status.
+      reason: NodeStatusNeverUpdated
+      status: Unknown
+      type: PIDPressure
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 0
+  nodeInfo:
+    architecture: arm64
+    bootID: 423dd6dd-e722-4629-b6dd-2252ec5275c6
+    containerRuntimeVersion: docker://24.0.2
+    kernelVersion: 5.15.49-linuxkit-pr
+    kubeProxyVersion: v1.25.9
+    kubeletVersion: v1.25.9
+    machineID: 567c9556-67e4-4dc8-8f01-5f03a6534486
+    operatingSystem: linux
+    osImage: Docker Desktop
+    systemUUID: 567c9556-67e4-4dc8-8f01-5f03a6534486

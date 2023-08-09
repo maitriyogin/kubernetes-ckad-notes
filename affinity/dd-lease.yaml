@@ -1,0 +1,17 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-06-27T15:03:00Z"
+  name: docker-desktop
+  namespace: kube-node-lease
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: docker-desktop
+    uid: 23e8f51c-6067-4546-a059-e3724b866fa3
+  resourceVersion: "378023"
+  uid: ab6fdd00-39bb-40a0-9360-6c6cc82f6952
+spec:
+  holderIdentity: docker-desktop
+  leaseDurationSeconds: 40
+  renewTime: "2023-07-04T15:35:00.116652Z"

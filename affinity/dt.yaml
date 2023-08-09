@@ -1,0 +1,172 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/cri-dockerd.sock
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2023-06-27T15:02:50Z"
+  labels:
+    beta.kubernetes.io/arch: arm64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: arm64
+    kubernetes.io/hostname: docker-desktop
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/control-plane: ""
+    node.kubernetes.io/exclude-from-external-load-balancers: ""
+  name: docker-desktop
+  resourceVersion: "362515"
+  uid: 23e8f51c-6067-4546-a059-e3724b866fa3
+spec: {}
+status:
+  addresses:
+  - address: 192.168.65.4
+    type: InternalIP
+  - address: docker-desktop
+    type: Hostname
+  allocatable:
+    cpu: "5"
+    ephemeral-storage: "56403987978"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 8039672Ki
+    pods: "110"
+  capacity:
+    cpu: "5"
+    ephemeral-storage: 61202244Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 8142072Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2023-07-04T09:54:38Z"
+    lastTransitionTime: "2023-06-27T15:02:49Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2023-07-04T09:54:38Z"
+    lastTransitionTime: "2023-06-27T15:08:26Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2023-07-04T09:54:38Z"
+    lastTransitionTime: "2023-06-27T15:02:49Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2023-07-04T09:54:38Z"
+    lastTransitionTime: "2023-06-27T15:03:21Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - localstack/localstack@sha256:5c3c432fcb6ec6343cc4b1dc98f804aa7daf39f322d7fdb42da6b589cbd918aa
+    - localstack/localstack:latest
+    sizeBytes: 1067437610
+  - names:
+    - confluentinc/cp-kafka@sha256:328bb7b00e15f173bee5f68a9da0c97651ca961e2f7736563dc55bbebac80e5e
+    - confluentinc/cp-kafka:latest
+    sizeBytes: 861550421
+  - names:
+    - confluentinc/cp-zookeeper@sha256:8fb8e15d702d6935d21622ac03e789ba79bcedd3fa809134556d9fed0f88f0e9
+    - confluentinc/cp-zookeeper:latest
+    sizeBytes: 861549218
+  - names:
+    - mongo@sha256:ad947856db716ddd0b9cc525e341c77208ed8dafcb4a6ad23f9b3addd7a4f71c
+    - mongo:latest
+    sizeBytes: 662638180
+  - names:
+    - hubproxy.docker.internal:5555/docker/desktop-kubernetes@sha256:f1573ffb14599a41a50fc9bd6f15c0f4060ed6ade929e9f2c458e5e3cc36cf68
+    - hubproxy.docker.internal:5555/docker/desktop-kubernetes:kubernetes-v1.25.9-cni-v1.1.1-critools-v1.25.0-cri-dockerd-v0.2.6-1-debian
+    sizeBytes: 385396541
+  - names:
+    - postgres@sha256:03652c675ae177af98ddd50f9f4b4b2cf8ad38d0e116aa68fe670fbc2cf250fc
+    - postgres:13.7
+    sizeBytes: 352454140
+  - names:
+    - influxdb@sha256:d7f5dd5f70e2f07391da189c7a3419fd4bba75086cb51eb894c125c866531c34
+    - influxdb:2.3.0-alpine
+    sizeBytes: 331008464
+  - names:
+    - otel/opentelemetry-collector-contrib-dev@sha256:0406d5dc12c8338e5b5191e685016b0e08d138b022fb6e993cf5e73140ee4b7a
+    - otel/opentelemetry-collector-contrib-dev:latest
+    sizeBytes: 283810771
+  - names:
+    - provectuslabs/kafka-ui@sha256:bc81d30cf3c2a9e2ea669b2b2e11de2021099606bbf6990b0772cb899e96f51d
+    - provectuslabs/kafka-ui:latest
+    sizeBytes: 259677976
+  - names:
+    - prom/prometheus@sha256:0f0b7feb6f02620df7d493ad7437b6ee95b6d16d8d18799f3607124e501444b1
+    - prom/prometheus:latest
+    sizeBytes: 226066298
+  - names:
+    - nginx@sha256:807113fc11cd58e5d9bd10b45da66790bdea2e1c53ba57655e110d8e963a9cd5
+    - nginx:latest
+    sizeBytes: 192299033
+  - names:
+    - nginx@sha256:593dac25b7733ffb7afe1a72649a43e574778bf025ad60514ef40f6b5d606247
+    sizeBytes: 192298817
+  - names:
+    - registry.k8s.io/etcd:3.5.6-0
+    sizeBytes: 180688846
+  - names:
+    - redis@sha256:6ccde0cb87c24c09b1970802b10e702ab4491ac932b79f69682609787379fa42
+    - redis:latest
+    sizeBytes: 149386194
+  - names:
+    - registry.k8s.io/kube-apiserver:v1.25.9
+    sizeBytes: 123299566
+  - names:
+    - registry.k8s.io/kube-controller-manager:v1.25.9
+    sizeBytes: 112814099
+  - names:
+    - redis@sha256:f9724694a0b97288d2255ff2b69642dfba7f34c8e41aaf0a59d33d10d8a42687
+    sizeBytes: 111434218
+  - names:
+    - registry.k8s.io/kube-proxy:v1.25.9
+    sizeBytes: 58056002
+  - names:
+    - jaegertracing/all-in-one@sha256:1cb80937ebe12ed06267d2f773623d33a4610df9ef59d82e92c15613f31772ed
+    - jaegertracing/all-in-one:latest
+    sizeBytes: 58044257
+  - names:
+    - registry.k8s.io/kube-scheduler:v1.25.9
+    sizeBytes: 49441087
+  - names:
+    - registry.k8s.io/coredns/coredns@sha256:8e352a029d304ca7431c6507b56800636c321cb52289686a581ab70aaa8a2e2a
+    - registry.k8s.io/coredns/coredns:v1.9.3
+    sizeBytes: 47660771
+  - names:
+    - docker/desktop-storage-provisioner@sha256:115d77efe6e256cefbcdf1d3292bede9339ef3952a2a83393cea217a3ffdef36
+    - docker/desktop-storage-provisioner:v2.0
+    sizeBytes: 39816902
+  - names:
+    - docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf
+    - docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e
+    sizeBytes: 34992760
+  - names:
+    - registry.k8s.io/pause:3.8
+    sizeBytes: 514000
+  nodeInfo:
+    architecture: arm64
+    bootID: 423dd6dd-e722-4629-b6dd-2252ec5275c7
+    containerRuntimeVersion: docker://24.0.2
+    kernelVersion: 5.15.49-linuxkit-pr
+    kubeProxyVersion: v1.25.9
+    kubeletVersion: v1.25.9
+    machineID: 567c9556-67e4-4dc8-8f01-5f03a653448e
+    operatingSystem: linux
+    osImage: Docker Desktop
+    systemUUID: 567c9556-67e4-4dc8-8f01-5f03a653448e
