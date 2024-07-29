@@ -156,6 +156,8 @@ spec:
       storage: 500Mi
 ```
 
+After you create the PersistentVolumeClaim, the Kubernetes control plane looks for a PersistentVolume that satisfies the claim's requirements. If the control plane finds a suitable PersistentVolume with the same StorageClass, it binds the claim to the volume.
+
 VolumeBindingMode
 
 3. Connect PVC to Pod
@@ -190,3 +192,11 @@ provisioner: kubernetes.io/no-provisioner
 reclaimPolicy: Delete
 volumeBindingMode: WaitForFirstConsumer
 ```
+
+## Stateful Sets
+
+Similar to a deployment
+
+1. pods are created in a sequential order
+2. Create a unique index on the pod
+3. maintain a sticky identity

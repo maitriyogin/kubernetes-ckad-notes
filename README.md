@@ -10,6 +10,18 @@ kubectl get pods
 
 kubectl describe pod myapp-pod
 
+## Aliases
+
+po fro PODS
+rs for ReplicaSets
+deploy for Deployments
+svc for Services
+ns for Namespaces
+netpol for Network policies
+pv for Persistent Volumnes
+pvc for PersistentVolumeClaims
+sa for service accounts
+
 ## Yaml
 
 uses yaml as input for object creation
@@ -81,6 +93,7 @@ Extracting yaml from an existing pod
 
 `k scale --replicas=6 -f replicas/replicaset-definition.yml`
 `k scale --replicas=6 replicaset myapp-replicaset`
+`kubectl scale deployment deployment --replicas=X`
 
 To create a yml from a replicaset
 `kubectl get replicaset myapp-replicaset -o yaml > rs-definition.yaml`
@@ -115,6 +128,7 @@ Deployement 1-_ Replcasets 1-_ Pods
 ## Namespaces
 
 `k get pods --namespace=kube-system`
+`k get pods -n=kube-system`
 
 to create a pod in another namespace
 `k create -f pod-definition.yml --namespace=dev`
@@ -620,7 +634,7 @@ spec:
 		image: data-processor
 	affinity:
 		nodeAffinity:
-			requireDuringSchedulingIgnoredDuringExection:
+			requireDuringSchedulingIgnoredDuringExecution:
 				nodeSelectorTerms:
 				- matchExoressions:
 					- key: size
@@ -637,3 +651,5 @@ preferredDuringSchedulingIgnoredDuringExection
 
 - DuringScheduling
 - DuringExecution
+
+Ignored means that the pods will ignore changes in the nodeaffinity if in a running state
